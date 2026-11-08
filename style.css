@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "Kaisei Decol";
+}
+
 #wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,33 +18,141 @@
 #header {
     display:grid;
     grid-template-columns: 1fr 2fr 1fr;
-    background-color: #9ab8e8;
-    min-height: 5vh;
+    background-color: #170E12;
+    min-height: 8vh;
     align-items: center;
+    color:#F2E8D9;
 }
 
 #header .logo{
     display:flex;
     align-items: center;
     justify-content: center;
-
+    gap:10px;
+    text-decoration: none;
 }
 
 #header .logo img{
     width: 50px;
+    filter: drop-shadow(0 0 7px rgba(197, 123, 145, 0.4));
+    transition: filter 0.5s ease;
+
 }
 
-#header .logo img{
-    width: 50px;
+#header .logo:hover img{
+    filter: drop-shadow(0 0 13px rgba(197, 123, 145, 0.7));
 }
 
-#header nav{
+#header .logo .name{
+    text-align: center;
+    font-weight: 700;
+    color:#F2E8D9;
+    
+}
+
+#header .logo .name span{
+    font-size: 26px;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    
+}
+
+#header .logo .name p{
+    font-size:12px;
+    color:#C57B91;
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+
+
+#header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#header nav a {
+    position: relative;
+    text-decoration: none;
+    color: #F2E8D9;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 0;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+#header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: #C57B91;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+#header nav a:hover {
+    color: #C57B91;
+}
+
+#header nav a:hover::after {
+    transform: scaleX(1);
+}
+
+#header nav a.active {
+    color: #C57B91;
+}
+
+#header nav a.active::after {
+    transform: scaleX(1);
+}
+
+#header nav a.active {
+    color: #C57B91;
+}
+
+#header nav a.active::after {
+    transform: scaleX(1);
+}
+
+
+#header #icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+#header #icons .book{
     display:flex;
+    align-items: center;
     justify-content: center;
     gap:10px;
+    background-color: #8B3949;
+    color:#F2E8D9;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.3s ease;
 }
 
-
+#header #icons .book:hover {
+    background-color: #A64D65;
+}
 
 #body {
     display: flex;
