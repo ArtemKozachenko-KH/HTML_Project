@@ -1,12 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=LXGW+WenKai+TC&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style-menu.css">
+    <title>Yosakura</title>
 </head>
+
 <body>
-    
+    <div id="wrapper">
+        <header id="header">
+            <a href="index.html" class="logo">
+                <img src="/img/logo.png" alt="logo">
+                <div class="name">
+                    <span>YOSAKURA</span>
+                    <p>━━━ Japanese Kitchen ━━━</p>
+                </div>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">Our Story</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contacts.html">Contact</a>
+            </nav>
+
+            <div id="icons">
+                <a href="#"><img src="/img/search.svg" alt="search"></a>
+                <a href="#"><img src="/img/account.svg" alt="account"></a>
+                <a href="#"><img src="/img/cart.svg" alt="cart"></a>
+                <a href="book.html" class="book"><img src="/img/calendar.svg" alt="calendar"><span>Book a
+                        Table</span></a>
+            </div>
+
+
+        </header>
+
+        <div id="hero">
+            <img src="/img/menu/banner-menu.jpg" alt="banner-menu">
+            <div class="banner-text">
+                <p>━━━ OUR MENU ━━━</p>
+                <h1>Discover Our</h1>
+                <h1>Signature Flavors</h1>
+                <p>Authentic Japanese cuisine crafted with<br>premium ingredients and timeless tradition.</p>
+            </div>
+        </div>
+
+        <div id="body">
+            <div class="menu-catalog">
+                <input type="radio" name="category" id="sushi-bar" checked>
+                <input type="radio" name="category" id="appetizers">
+                <input type="radio" name="category" id="hot-dishes">
+                <input type="radio" name="category" id="ramen-soups">
+                <input type="radio" name="category" id="desserts">
+                <input type="radio" name="category" id="drinks">
+
+                <div class="menu-buttons">
+                    <label for="sushi-bar">Sushi Bar</label>
+                    <label for="appetizers">Appetizers</label>
+                    <label for="hot-dishes">Hot Dishes</label>
+                    <label for="ramen-soups">Ramen & Soups</label>
+                    <label for="desserts">Desserts</label>
+                    <label for="drinks">Drinks</label>
+                </div>
+
+                <div class="menu-products">
+                    <div class="menu-sushi-bar">
+                        <div class="cards-line">
+                            <h2 class="menu-divider">Nigiri</h2>
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/salmon-nigiri_full_plate.png" alt="salmon-nigiri">
+                                    <img class="back" src="/img/menu/salmon-nigiri_half_plate.png" alt="salmon-nigiri-half">
+                                    <img class="lift" src="/img/menu/salmon-nigiri_stick.png" alt="salmon-nigiri-sticks">
+                                </div>
+                                <h3>Salmon Nigiri</h3>
+                                <p class="contain">Salmon, rice</p>
+                                <div class="card-bottom">
+                                    <p class="price">$7.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/tuna-nigiri_full_plate.png" alt="tuna-nigiri">
+                                    <img class="back" src="/img/menu/tuna-nigiri_half_plate.png" alt="tuna-nigiri-half">
+                                    <img class="lift" src="/img/menu/tuna-nigiri_stick.png" alt="tuna-nigiri-sticks">
+                                </div>
+                                <h3>Tuna Nigiri</h3>
+                                <p class="contain">Tuna, rice</p>
+                                <div class="card-bottom">
+                                    <p class="price">$8.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/shrimp-nigiri_full_plate.png" alt="shrimp-nigiri">
+                                    <img class="back" src="/img/menu/shrimp-nigiri_half_plate.png" alt="salmon-nigiri-half">
+                                    <img class="lift" src="/img/menu/shrimp-nigiri_stick.png" alt="shrimp-nigiri-sticks">
+                                </div>
+                                <h3>Shrimp Nigiri</h3>
+                                <p class="contain">Shrimp, rice</p>
+                                <div class="card-bottom">
+                                    <p class="price">$7.50</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/unagi-nigiri_full_plate.png" alt="unagi-nigiri">
+                                    <img class="back" src="/img/menu/unagi-nigiri_half_plate.png" alt="unagi-nigiri-half">
+                                    <img class="lift" src="/img/menu/unagi-nigiri_stick.png" alt="unagi-nigiri-sticks">
+                                </div>
+                                <h3>Unagi Nigiri</h3>
+                                <p class="contain">Unagi, rice</p>
+                                <div class="card-bottom">
+                                    <p class="price">$7.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <h2 class="menu-divider">Rolls</h2>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/philadelphia_full_plate.png" alt="philadelphia">
+                                    <img class="back" src="/img/menu/philadelphia_3roll_plate.png" alt="rollplate">
+                                    <img class="lift" src="/img/menu/philadelphia_stick.png" alt="rollstick">
+                                </div>
+                                <h3>Philadelphia Roll</h3>
+                                <p class="contain">Salmon, cream cheese, cucumber, rice</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/unagi-dragon_full_plate.png" alt="philadelphia">
+                                    <img class="back" src="/img/menu/unagi-dragon_3roll_plate.png" alt="rollplate">
+                                    <img class="lift" src="/img/menu/unagi-dragon_stick.png" alt="rollstick">
+                                </div>
+                                <h3>Unagi Dragon Roll</h3>
+                                <p class="contain">Eel, avocado, cucumber, cream cheese, unagi</p>
+                                <div class="card-bottom">
+                                    <p class="price">$16.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/tuna-philadelphia_full_plate.png" alt="philadelphia">
+                                    <img class="back" src="/img/menu/tuna-philadelphia_3roll_plate.png" alt="rollplate">
+                                    <img class="lift" src="/img/menu/tuna-philadelphia_stick.png" alt="rollstick">
+                                </div>
+                                <h3>Tuna Philadelphia Roll</h3>
+                                <p class="contain">Tuna, cream cheese, avocado, cucumber</p>
+                                <div class="card-bottom">
+                                    <p class="price">$14.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/shrimp-tempura_full_plate.png" alt="philadelphia">
+                                    <img class="back" src="/img/menu/shrimp-tempura_3roll_plate.png" alt="rollplate">
+                                    <img class="lift" src="/img/menu/shrimp-tempura_stick.png" alt="rollstick">
+                                </div>
+                                <h3>Shrimp Tempura roll</h3>
+                                <p class="contain">Tempura shrimp, salmon, avocado, cucumber</p>
+                                <div class="card-bottom">
+                                    <p class="price">$14.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
+                            <h2 class="menu-divider">Sashimi</h2>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/salmon-sashimi_full_plate.png" alt="salmon-sashimi">
+                                    <img class="back" src="/img/menu/salmon-sashimi_half_plate.png" alt="salmon-sashimi-half">
+                                    <img class="lift" src="/img/menu/salmon-sashimi_stick.png" alt="salmon-sashimi-sticks">
+                                </div>
+                                <h3>Salmon Sashimi</h3>
+                                <p class="contain">Salmon</p>
+                                <div class="card-bottom">
+                                    <p class="price">$5.99</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/tuna-sashimi_full_plate.png" alt="tuna-sashimi">
+                                    <img class="back" src="/img/menu/tuna-sashimi_half_plate.png" alt="tuna-sashimi-half">
+                                    <img class="lift" src="/img/menu/tuna-sashimi_stick.png" alt="tuna-sashimi-sticks">
+                                </div>
+                                <h3>Tuna Sashimi</h3>
+                                <p class="contain">Tuna (Maguro)</p>
+                                <div class="card-bottom">
+                                    <p class="price">$6.99</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/hamachi-sashimi_full_plate.png" alt="hamachi-sashimi">
+                                    <img class="back" src="/img/menu/hamachi-sashimi_half_plate.png" alt="hamachi-sashimi-half">
+                                    <img class="lift" src="/img/menu/hamachi-sashimi_stick.png" alt="hamachi-sashimi-sticks">
+                                </div>
+                                <h3>Hamachi Sashimi</h3>
+                                <p class="contain">Yellowtail (Hamachi)</p>
+                                <div class="card-bottom">
+                                    <p class="price">$7.50</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="sushi-photo">
+                                    <img class="full" src="/img/menu/tai-sashimi_full_plate.png" alt="tai-sashimi">
+                                    <img class="back" src="/img/menu/tai-sashimi_half_plate.png" alt="tai-sashimi-half">
+                                    <img class="lift" src="/img/menu/tai-sashimi_stick.png" alt="tai-sashimi-sticks">
+                                </div>
+                                <h3>Tai Sashimi</h3>
+                                <p class="contain">Sea Bream (Tai)</p>
+                                <div class="card-bottom">
+                                    <p class="price">$7.99</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                    
+                    <div class="menu-appetizers">
+                        <div class="cards-line">
+                            <div class="card">
+                                <img src="/img/menu/gedza.png" alt="gedza">
+                                <h3>Gedza</h3>
+                                <p class="contain">Chicken</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="menu-hot-dishes">
+                        <div class="cards-line">
+                            <div class="card">
+                                <img src="/img/menu/yakitori.png" alt="yakitori">
+                                <h3>Yakitori</h3>
+                                <p class="contain">Salmon, cream cheese, cucumber</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-ramen-soups">
+                        <div class="cards-line">
+
+                            <div class="card">
+                                <img src="/img/menu/ramen.png" alt="ramen">
+                                <h3>Ramen</h3>
+                                <p class="contain">eggs, pasta</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-desserts">
+                        <div class="cards-line">
+
+                            <div class="card">
+                                <img src="/img/menu/deserts.png" alt="philadelphia">
+                                <h3>Motti</h3>
+                                <p class="contain">Almond flover, yummy filling</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-drinks">
+                        <div class="cards-line">
+
+                            <div class="card">
+                                <img src="/img/menu/drinks.png" alt="matcha">
+                                <h3>Matcha</h3>
+                                <p class="contain">matcha</p>
+                                <div class="card-bottom">
+                                    <p class="price">$12.00</p>
+                                    <a href="#" class="cart-but"><img src="/img/cart.svg" alt="add-to-cart">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer id="footer">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <img src="/img/logo.png" alt="logo">
+                    <div>
+                        <h2>YOSAKURA</h2>
+                        <p>— Japanese Kitchen —</p>
+                    </div>
+                </a>
+                <p>A little piece of Japan in every dish.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">Our Story</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Mon – Fri: 12:00 – 22:00</p>
+                <p>Sat – Sun: 12:00 – 23:00</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="booking.html">Book a Table</a>
+                <a href="#">Instagram</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 YOSAKURA. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
 </body>
+
 </html>
