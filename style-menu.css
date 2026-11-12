@@ -41,7 +41,6 @@
 #sushi-bar:checked ~ .menu-buttons label[for="sushi-bar"],
 #appetizers:checked ~ .menu-buttons label[for="appetizers"],
 #hot-dishes:checked ~ .menu-buttons label[for="hot-dishes"],
-#ramen-soups:checked ~ .menu-buttons label[for="ramen-soups"],
 #desserts:checked ~ .menu-buttons label[for="desserts"],
 #drinks:checked ~ .menu-buttons label[for="drinks"] {
     background-color: #8B3949;
@@ -55,7 +54,6 @@
 #sushi-bar:checked ~ .menu-products .menu-sushi-bar,
 #appetizers:checked ~ .menu-products .menu-appetizers,
 #hot-dishes:checked ~ .menu-products .menu-hot-dishes,
-#ramen-soups:checked ~ .menu-products .menu-ramen-soups,
 #desserts:checked ~ .menu-products .menu-desserts,
 #drinks:checked ~ .menu-products .menu-drinks {
     display: block;
@@ -167,3 +165,247 @@
 .menu-divider::after {
     background: linear-gradient(to left, transparent, #8B3949);
 }
+
+
+/* Appetizers */
+
+
+
+
+.tempura {
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.tempura img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tempura img:nth-child(1) {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.tempura img:nth-child(3) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .tempura img:nth-child(1) {
+    opacity: 0;
+}
+
+.card:hover .tempura img:nth-child(3) {
+    opacity: 1;
+}
+
+.tempura img:nth-child(2) {
+    z-index: 3;
+}
+
+.tempura img:nth-child(4),
+.tempura img:nth-child(5) {
+    z-index: 2;
+    opacity: 0;
+}
+
+.card:hover .tempura img:nth-child(4) {
+    animation: tempuraDry 2s ease-in-out forwards;
+}
+
+.card:hover .tempura img:nth-child(5) {
+    animation: tempuraWet 2s ease-in-out forwards;
+}
+
+@keyframes tempuraDry {
+    0%   { opacity: 1; transform: translateY(-50px); }
+    49%  { opacity: 1; transform: translateY(0px); }
+    50%, 100% { opacity: 0; transform: translateY(0px); }
+}
+
+@keyframes tempuraWet {
+    0%, 49% { opacity: 0; transform: translateY(0px); }
+    50%  { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 1; transform: translateY(-50px); }
+}
+
+
+
+
+
+/* Hot Dishes*/
+
+                 /*Spicy*/
+
+.menu-hot-dishes .card {
+    display: grid;
+    grid-template-rows: 190px auto auto 1fr;
+}
+
+.menu-hot-dishes .card > img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+
+.menu-hot-dishes .card > img:nth-child(2) {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.menu-hot-dishes .card:hover > img:nth-child(2) {
+    opacity: 1;
+}
+
+.menu-hot-dishes .card .card-bottom {
+    align-self: end;
+}
+
+
+              /*Ramens*/
+
+
+
+.menu-hot-dishes .ramen {
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.menu-hot-dishes .ramen img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menu-hot-dishes .ramen img:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.menu-hot-dishes .ramen img:nth-child(3) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.menu-hot-dishes .card:hover .ramen img:nth-child(2) {
+    opacity: 1;
+}
+
+.menu-hot-dishes .card:hover .ramen img:nth-child(3) {
+    opacity: 1;
+    transform: translateY(-45px);
+}
+
+
+
+
+
+
+/* Desserts*/
+
+
+.menu-desserts .cake {
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.menu-desserts .cake > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-desserts .cake > img:first-child {
+    opacity: 1;
+}
+
+.menu-desserts .cake > img:nth-child(2) { transition-delay: 1.2s; }
+.menu-desserts .cake > img:nth-child(3) { transition-delay: 0.8s; }
+.menu-desserts .cake > img:nth-child(4) { transition-delay: 0.4s; }
+.menu-desserts .cake > img:nth-child(5) { transition-delay: 0s; }
+
+.menu-desserts .card:hover .cake > img:nth-child(n+2) {
+    opacity: 1;
+}
+
+.menu-desserts .card:hover .cake > img:nth-child(2) { transition-delay: 0s; }
+.menu-desserts .card:hover .cake > img:nth-child(3) { transition-delay: 0.4s; }
+.menu-desserts .card:hover .cake > img:nth-child(4) { transition-delay: 0.8s; }
+.menu-desserts .card:hover .cake > img:nth-child(5) { transition-delay: 1.2s; }
+
+
+/* Drinks */
+
+.drink-photo {
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.drink-photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drink-photo .frost4 {
+    mask-image: linear-gradient(to top, black 40%, transparent 60%);
+    mask-size: 100% 300%;
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
+
+    transition: mask-position 1s ease-in-out 3.5s;
+}
+
+.card:hover .drink-photo .frost4 {
+    mask-position: 0 60%;
+    transition-delay: 0s;
+}
+
+
+
+
+
+
+.menu-drinks .card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.menu-drinks .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background: url("/img/menu/frost_card.png") center / 100% 100% no-repeat;
+
+    clip-path: circle(0% at 50% 30%);
+    transition: clip-path 5s ease-in-out;
+}
+
+.menu-drinks .card:hover::before {
+    clip-path: circle(120% at 50% 30%);
+}
+
+.menu-drinks .card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
